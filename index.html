@@ -1,0 +1,77 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Study Tools</h1>
+
+  <nav>
+    <button onclick="showTool('wordCounter')">Word Counter</button>
+    <button onclick="showTool('gpaCalc')">GPA Calculator</button>
+    <button onclick="showTool('timer')">Study Timer</button>
+    <button onclick="showTool('dictionary')">Dictionary</button>
+    <button onclick="showTool('flashcards')">Flashcards</button>
+    <button onclick="showTool('quiz')">Quiz Generator</button>
+  </nav>
+
+  <!-- Word Counter -->
+  <section id="wordCounter" class="tool hidden">
+    <h2>✍️ Word Counter</h2>
+    <textarea id="wcInput" placeholder="Type here..."></textarea>
+    <p id="wcResult">Words: 0 | Characters: 0</p>
+    <button onclick="countWords()">Count</button>
+  </section>
+
+  <!-- GPA Calculator -->
+  <section id="gpaCalc" class="tool hidden">
+    <h2>📊 GPA Calculator</h2>
+    <input type="number" id="gpaGrades" placeholder="Enter total grade points">
+    <input type="number" id="gpaCredits" placeholder="Enter total credits">
+    <button onclick="calcGPA()">Calculate</button>
+    <p id="gpaResult"></p>
+  </section>
+
+  <!-- Study Timer -->
+  <section id="timer" class="tool hidden">
+    <h2>⏳ Study Timer</h2>
+    <input type="number" id="timeMinutes" placeholder="Enter minutes">
+    <button onclick="startTimer()">Start</button>
+    <p id="timerDisplay"></p>
+  </section>
+
+  <!-- Dictionary -->
+  <section id="dictionary" class="tool hidden">
+    <h2>📖 Dictionary</h2>
+    <input type="text" id="dictWord" placeholder="Enter a word">
+    <button onclick="searchDictionary()">Search</button>
+    <p id="dictResult">🔎 Works Online + Offline</p>
+  </section>
+
+  <!-- Flashcards -->
+  <section id="flashcards" class="tool hidden">
+    <h2>🃏 Flashcards</h2>
+    <input type="text" id="flashQ" placeholder="Enter question">
+    <input type="text" id="flashA" placeholder="Enter answer">
+    <button onclick="addFlashcard()">Add</button>
+    <ul id="flashList"></ul>
+  </section>
+
+  <!-- Quiz Generator -->
+  <section id="quiz" class="tool hidden">
+    <h2>❓ Quiz Generator</h2>
+    <input type="text" id="quizQ" placeholder="Enter question">
+    <input type="text" id="quizA" placeholder="Enter answer">
+    <button onclick="addQuiz()">Add</button>
+    <button onclick="takeQuiz()">Take Quiz</button>
+    <div id="quizArea"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+---
